@@ -1,0 +1,11 @@
+<h1>{{blog.title}}</h1>
+<a href="{%url 'home' %}">홈으로</a><br><br>
+
+<h3>{{blog.body}}</h3>
+{{blog.id}}번째 글입니다.<br>
+{{blog.pub_date}}<br><br>
+
+<a href="{%url 'edit' blog.id %}">수정하기</a>
+<form action="{% url 'destroy' blog.id %}">
+    <input type="submit" value="삭제하기">
+</form>

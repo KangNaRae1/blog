@@ -1,0 +1,9 @@
+<h1 style="color:cornflowerblue">새 글쓰기</h1><br>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_p}}
+    </table>
+    <br><br>
+    <input type="submit" value="제출하기">
+</form>
